@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/custom-button.dart';
 import '../widgets/text-form-field.dart';
 
 class AddFoodForm extends StatefulWidget{
@@ -20,41 +21,20 @@ class AddFormState extends State<AddFoodForm>{
       key: _formKey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
-        children: <Widget>[
-          const CustomTextField(
+        children: const <Widget>[
+          CustomTextField(
               hintText: 'Enter the name of the food.',
               labelText: 'Name',
           ),
-          const CustomTextField(
+          CustomTextField(
               hintText: 'Enter the calorie amount of food',
               labelText: 'Calorie',
             ),
-          const CustomTextField(
+          CustomTextField(
               hintText: 'Description',
               labelText: 'Description',
           ),
-          Container(
-              margin: const EdgeInsets.only(left: 15, right: 15, top: 10, bottom: 10),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5)
-                  ),
-                  minimumSize: const Size.fromHeight(60),
-                  backgroundColor: Colors.blue,
-                ),
-                onPressed: (){
-                      print("form submitted");
-                      },
-                child: const Text(
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 20,
-                    color: Colors.white,
-                  ),
-                'Submit'
-                ),
-              )),
+          CustomButton(label: 'Submit'),
         ],
       ),
     );

@@ -48,7 +48,8 @@ class BottomSheetModal extends StatelessWidget{
                           child: Row(
                             children: [
                               const Icon(
-                                  Icons.food_bank
+                                Icons.food_bank,
+                                size: 30,
                               ),
                               Text(
                                   style: const  TextStyle(
