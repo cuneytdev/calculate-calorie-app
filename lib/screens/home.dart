@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../forms/add-food.dart';
 import '../widgets/bottom-sheet-modal.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -25,8 +26,8 @@ class HomeScreen extends StatelessWidget {
             children: const [
               Text('This is home screen.'),
               BottomSheetModal(
-                  buttonLabel: 'Add ',
-                  children: Text("asdasdas"))
+                  buttonLabel: 'Add Food',
+                  children: AddFoodForm())
             ],
           ),
         ),
