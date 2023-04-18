@@ -25,8 +25,8 @@ class CustomTextFieldState extends State<CustomTextField>{
     return Container(
       padding: const EdgeInsets.only(
         bottom: 5,
-        left: 10,
-        right: 10,
+        left: 15,
+        right: 15,
         top: 5
       ),
       child: 

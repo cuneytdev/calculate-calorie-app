@@ -34,11 +34,26 @@ class AddFormState extends State<AddFoodForm>{
               labelText: 'Description',
           ),
           Container(
-              alignment: Alignment.center,
-              margin: const EdgeInsets.all(10),
-              child: const ElevatedButton(
-                onPressed: null,
-                child: Text('Submit'),
+              margin: const EdgeInsets.only(left: 15, right: 15, top: 10, bottom: 10),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5)
+                  ),
+                  minimumSize: const Size.fromHeight(60),
+                  backgroundColor: Colors.blue,
+                ),
+                onPressed: (){
+                      print("form submitted");
+                      },
+                child: const Text(
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                'Submit'
+                ),
               )),
         ],
       ),

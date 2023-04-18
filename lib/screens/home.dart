@@ -26,6 +26,7 @@ class HomeScreen extends StatelessWidget {
             children: const [
               Text('This is home screen.'),
               BottomSheetModal(
+                  header: 'Add Food',
                   buttonLabel: 'Add Food',
                   children: AddFoodForm())
             ],

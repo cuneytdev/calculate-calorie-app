@@ -4,12 +4,16 @@ class BottomSheetModal extends StatelessWidget{
   final String buttonLabel;
   final Widget children;
   final double height;
+  final String? header;
+  final Icon? headerIcon;
 
   const BottomSheetModal({
     super.key,
     required this.buttonLabel,
     required this.children,
-    this.height = 500
+    this.height = 500,
+    this.header,
+    this.headerIcon
   });
 
   @override
@@ -32,12 +36,36 @@ class BottomSheetModal extends StatelessWidget{
                   color: Colors.white
                 ),
                 height: height,
-                child: Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[children],
-                  ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: (<Widget>[
+                    Column(
+                      children: [
+                        if(header != null)  Container(
+                          alignment: Alignment.topLeft,
+                          padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
+                          child: Row(
+                            children: [
+                              const Icon(
+                                  Icons.food_bank
+                              ),
+                              Text(
+                                  style: const  TextStyle(
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.w600
+                                  ), header!
+                              )
+                            ]
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.only(top: 15),
+                          child: children,
+                        )
+                      ],
+                    )
+                  ]),
                 ),
               );
             },
