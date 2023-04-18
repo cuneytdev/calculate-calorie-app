@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/bottom-sheet-modal.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -22,6 +24,9 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: const [
               Text('This is home screen.'),
+              BottomSheetModal(
+                  buttonLabel: 'Add ',
+                  children: Text("asdasdas"))
             ],
           ),
         ),
