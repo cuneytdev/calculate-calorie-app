@@ -19,6 +19,7 @@ class BottomSheetModal extends StatelessWidget{
         child: Text(buttonLabel),
         onPressed: () {
           showModalBottomSheet<void>(
+            useRootNavigator: true,
             context: context,
             backgroundColor: Colors.transparent,
             builder: (BuildContext context) {
